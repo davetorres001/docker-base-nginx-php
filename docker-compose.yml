@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+    api:
+        build: .
+        ports:
+            - 5500:80
+            - 5501:443
+        volumes:
+            - .:/var/www
+        networks:
+            - overlay
+
+
+networks:
+    overlay:
